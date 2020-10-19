@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Задача 2</title>
+
+    <!-- подключение внешних таблиц стилей  -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- картинка для отображения в заголовке вкладки браузера -->
+    <link rel="shortcut icon" href="../imgs/alien.png" type="image/x-icon" />
+    <link rel="icon" href="../imgs/alien.png" type="image/x-icon" />
+
+    <!-- подключение файла вспомогательных функций -->
+    <script src="../js/task2.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="container-fluid">
+        <nav class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.html"><i class="fas fa-home"></i></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html" title="Главная страница">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="page1.html"
+                                   title="Чеки">Задача 1</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="page2.html"
+                                   title="Парк развлечений">Задача 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="page3.html"
+                                   title="Фильмы">Задача 3</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="row">
+            <article class="offset-1 col-10 bg-light">
+                <p class="text-justify">
+                    <b>Задача 2.</b> Необходимо хранить в локальном хранилище данные о парке развлечений:
+                    название и адрес парка, список аттракционов. Формат хранения – JSON.
+                    Информация об аттракционе: название, время начала работы, время завершения работы и стоимость сеанса.
+                    Создавать парк при первом входе на страницу
+                    (вводить данные парка – название и адрес парка, инициализировать список аттракционов – не менее 10 аттракционов).
+                    На страницу выводить данные парка и таблицу аттракционов.
+                </p>
+                <p class="text-justify">
+                    Реализовать обработки:
+                </p>
+                <ul>
+                    <li>Выделить аттракционы, начинающие работу первыми</li>
+                    <li>Выделить аттракционы, завершающие работу последними</li>
+                    <li>Выделить аттракционы со стоимостью сеанса в заданном диапазоне</li>
+                    <li>Добавление аттракциона в список аттракционов (при помощи формы на отдельной странице)</li>
+                </ul>
+                <hr />
+                <div id="park"></div>
+                <div id="attractions"></div>
+                <button id="btnStartFirst">Начинают работу первыми</button>
+                <button id="btnStopFirst">Завершают работу последними</button>
+                <hr/>
+                <p class="text-justify">
+                    Чтобы выделить атракционы со стоимостью сеанса в заданном диапазоне. Введите значения и нажмите "Показать"
+                </p>
+                <form name="task2" class="form-group">
+                    <label for="minPrice">Минимальная цена:&emsp;</label><input id="minPrice" type="number" min="0" max="1000" />
+                    <label for="maxPrice">Максимальная цена:&emsp;</label><input id="maxPrice" type="number" min="0" max="1000" />
+                    <input class="btn btn-primary mb-2" type="button" id="btnPriceRange" value="Показать" />
+                </form>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
